@@ -16,6 +16,7 @@
    under the License.
 */
 using System.Collections;
+using System.Collections.Generic;
 using RabbitMQ.Client;
 
 namespace RabbitMQHare
@@ -37,7 +38,7 @@ namespace RabbitMQHare
         public string Type { get; set; }
         public bool Durable { get; set; }
         public bool AutoDelete { get; set; }
-        public IDictionary Arguments { get; set; }
+        public IDictionary<string,object> Arguments { get; set; }
 
         /// <summary>
         /// Declare the exchange against a model

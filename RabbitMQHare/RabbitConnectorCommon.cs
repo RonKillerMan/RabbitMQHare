@@ -163,7 +163,7 @@ namespace RabbitMQHare
             }
             if (!ok)
             {
-                var e = new BrokerUnreachableException(attempts, exceptions);
+                var e = new BrokerUnreachableException(attempts, exceptions,null);
                 OnPermanentConnectionFailureFailure(e);
             }
             return ok;
